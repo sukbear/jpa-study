@@ -1,0 +1,16 @@
+sukbear\BootStart.class
+sukbear\boot\model\Department.class
+sukbear\boot\dto\UserDeptDTO.class
+sukbear\boot\model\User$UserBuilder.class
+sukbear\boot\web\controller\UserController.class
+sukbear\boot\model\QUser.class
+sukbear\boot\config\JpaFactoryBean.class
+sukbear\boot\dao\UserRepository.class
+sukbear\boot\web\service\UserService.class
+sukbear\boot\web\service\UserServiceImp.class
+sukbear\boot\config\SwaggerConfig.class
+sukbear\boot\model\User.class
+sukbear\util\BasicRepository.class
+sukbear\boot\model\QDepartment.class
+sukbear\boot\web\vo\UserVO.class
+sukbear\boot\dto\UserDeptDTO$UserDeptDTOBuilder.class
