@@ -141,4 +141,9 @@ public class UserServiceImp implements UserService {
         return true;
 
     }
+
+    @Override
+    public Boolean isExist(Long userId) {
+        return userRepository.existsById(userId);
+    }
 }

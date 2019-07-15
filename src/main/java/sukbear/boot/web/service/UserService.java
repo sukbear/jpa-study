@@ -31,4 +31,6 @@ public interface UserService {
     List<UserDeptDTO> findByDepatmentIdDTO(Long departmentId);
 
     Boolean updateUserInfo(String name, String phone);
+
+    Boolean isExist(Long userId);
 }

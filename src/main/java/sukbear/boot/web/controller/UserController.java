@@ -10,8 +10,10 @@ import sukbear.boot.dao.UserRepository;
 import sukbear.boot.dto.UserDeptDTO;
 import sukbear.boot.model.User;
 import sukbear.boot.web.service.UserService;
+import sukbear.boot.web.validator.UserValidator;
 import sukbear.boot.web.vo.UserVO;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /***
@@ -29,9 +31,14 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    UserValidator userValidator;
     @DeleteMapping("/{user_id}")
     @ApiOperation(value = "根据用户id删除用户", httpMethod = "DELETE")
-    public ResponseEntity deleteUser(@PathVariable("user_id") Long userId) {
+    public ResponseEntity deleteUser(@PathVariable("user_id") @NotNull Long userId) {
+       if(!userService.isExist(userId)){
+           return ResponseEntity.ok("null");
+       }
         userService.deleteUser(userId);
         return ResponseEntity.ok("ok");
     }
