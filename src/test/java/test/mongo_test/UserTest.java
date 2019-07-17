@@ -10,7 +10,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import sukbear.BootStart;
 import sukbear.mongo.user.User;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /***
  *@ClassName UserTest
@@ -37,7 +39,8 @@ public class UserTest {
 
     @Test
     public void select() {
-
-        log.info("res-> {}");
+        List<String> list = new ArrayList<>();
+        list.add("basketball");
+        log.info("res-> {}",userDaoRepository.findByFavoritesIn(list));
     }
 }
